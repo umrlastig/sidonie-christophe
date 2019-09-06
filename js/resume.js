@@ -20,56 +20,27 @@
     $('.navbar-collapse').collapse('hide');
   });
 
+  // language
+	// Hide Language En when the web page loads
+  $('.lang-fr').hide();
+  $('.selectpicker').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    if(previousValue == 'English'){
+      // find all content with .lang-en under the div post-content and hide it
+      $(".lang-en").fadeToggle('slow',function() {
+        // find all content with .lang-fr under the div post-content and show it
+        $(".lang-fr").show(); });
+    }
+    else {
+      // find all content with .lang-fr under the div post-content and hide it
+      $('.lang-fr').fadeToggle('slow',function() {
+        // find all content with .lang-en under the div post-content and show it
+          $('.lang-en').show();});
+    }
+  });
+
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#sideNav'
   });
-
-  // portfolio
-  if($('.isotopeWrapper').length){
-
-    var $container = $('.isotopeWrapper');
-    var $resize = $('.isotopeWrapper').attr('id');
-    // initialize isotope
-
-    $container.isotope({
-      itemSelector: '.isotopeItem',
-      resizable: false, // disable normal resizing
-      masonry: {
-        columnWidth: $container.width() / $resize
-      }
-    });
-
-    $('#filter a').click(function(){
-      $('#filter a').removeClass('current');
-      $(this).addClass('current');
-      var selector = $(this).attr('data-filter');
-			var test = selector.substring(1);
-			$('article').each(function(){
-				if($(this).hasClass(test)){
-					$(this).removeClass('hidden');
-				}
-			});
-    $container.isotope({
-      filter: selector,
-      animationOptions: {
-      duration: 1000,
-      easing: 'easeOutQuart',
-      queue: false
-      }
-    });
-
-    return false;
-  });
-
-  $(window).smartresize(function(){
-    $container.isotope({
-      // update columnWidth to a percentage of container width
-      masonry: {
-        columnWidth: $container.width() / $resize
-      }
-    });
-  });
-	}
 
 })(jQuery); // End of use strict
