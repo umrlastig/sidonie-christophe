@@ -30,8 +30,8 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 2.5rem;
+  font-size: 6rem;
+  line-height: 5.5rem;
 }
 
 h2 {
@@ -152,7 +152,7 @@ p.lead {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 50rem;
+  max-width: 75rem;
 }
 
 section.resume-section .resume-item .resume-date {
