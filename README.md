@@ -1,3 +1,3 @@
-# gtouya_webpage
+# schristophe_webpage
 
-This repository contains the code of Guillaume Touya's own page in LASTIG website.
+This repository contains the code of Sidonie Christophe's own page in LASTIG website.
