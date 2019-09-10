@@ -249,17 +249,17 @@ var createPubHTML = function(docs, parent){
 pubLinkElement.appendChild(aHALElement);
   // create an a element with the url of the pdf
   if (docs.fileMain_s !== undefined) {
-  pdfElement = document.createElement('a');
-  pdfElement.setAttribute("href",docs.fileMain_s);
-  pdfElement.setAttribute("class","imgLink");
-  imgPdfElement = document.createElement('img');
-  imgPdfElement.setAttribute("title","pdf");
-  imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
-  imgPdfElement.setAttribute("height","20");
-  imgPdfElement.setAttribute("alt","pdf");
- pdfElement.appendChild(imgPdfElement);
-pubLinkElement.appendChild(pdfElement);
-}
+    pdfElement = document.createElement('a');
+    pdfElement.setAttribute("href",docs.fileMain_s);
+    pdfElement.setAttribute("class","imgLink");
+    imgPdfElement = document.createElement('img');
+    imgPdfElement.setAttribute("title","pdf");
+    imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
+    imgPdfElement.setAttribute("height","20");
+    imgPdfElement.setAttribute("alt","pdf");
+    pdfElement.appendChild(imgPdfElement);
+    pubLinkElement.appendChild(pdfElement);
+  }
 }
 
 
@@ -298,16 +298,16 @@ var createTalkHTML = function(docs, parent){
   pubLinkElement.appendChild(aHALElement);
   // create an a element with the url of the pdf
   if (docs.fileMain_s !== undefined) {
-  pdfElement = document.createElement('a');
-  pdfElement.setAttribute("href",docs.fileMain_s);
-  pdfElement.setAttribute("class","imgLink");
-  imgPdfElement = document.createElement('img');
-  imgPdfElement.setAttribute("title","pdf");
-  imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
-  imgPdfElement.setAttribute("height","20");
-  imgPdfElement.setAttribute("alt","pdf");
-  pdfElement.appendChild(imgPdfElement);
-  pubLinkElement.appendChild(pdfElement);
+    pdfElement = document.createElement('a');
+    pdfElement.setAttribute("href",docs.fileMain_s);
+    pdfElement.setAttribute("class","imgLink");
+    imgPdfElement = document.createElement('img');
+    imgPdfElement.setAttribute("title","pdf");
+    imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
+    imgPdfElement.setAttribute("height","20");
+    imgPdfElement.setAttribute("alt","pdf");
+    pdfElement.appendChild(imgPdfElement);
+    pubLinkElement.appendChild(pdfElement);
   }
 }
 
