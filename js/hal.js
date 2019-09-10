@@ -248,6 +248,7 @@ var createPubHTML = function(docs, parent){
  aHALElement.appendChild(imgElement);
 pubLinkElement.appendChild(aHALElement);
   // create an a element with the url of the pdf
+  if (docs.fileMain_s !== undefined) {
   pdfElement = document.createElement('a');
   pdfElement.setAttribute("href",docs.fileMain_s);
   pdfElement.setAttribute("class","imgLink");
@@ -258,6 +259,7 @@ pubLinkElement.appendChild(aHALElement);
   imgPdfElement.setAttribute("alt","pdf");
  pdfElement.appendChild(imgPdfElement);
 pubLinkElement.appendChild(pdfElement);
+}
 }
 
 
@@ -295,6 +297,7 @@ var createTalkHTML = function(docs, parent){
   aHALElement.appendChild(imgElement);
   pubLinkElement.appendChild(aHALElement);
   // create an a element with the url of the pdf
+  if (docs.fileMain_s !== undefined) {
   pdfElement = document.createElement('a');
   pdfElement.setAttribute("href",docs.fileMain_s);
   pdfElement.setAttribute("class","imgLink");
@@ -303,8 +306,9 @@ var createTalkHTML = function(docs, parent){
   imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
   imgPdfElement.setAttribute("height","20");
   imgPdfElement.setAttribute("alt","pdf");
-pdfElement.appendChild(imgPdfElement);
+  pdfElement.appendChild(imgPdfElement);
   pubLinkElement.appendChild(pdfElement);
+  }
 }
 
 var sort_by = function(field, reverse, primer){
