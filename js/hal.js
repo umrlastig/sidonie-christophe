@@ -238,26 +238,26 @@ var createPubHTML = function(docs, parent){
   spanElement.appendChild(inputElement);
   // create an a element with the url to hal
   aHALElement = document.createElement('a');
-  aHALElement.setAttribute("href",docs.halId_s);
+  aHALElement.setAttribute("href","https://hal.archives-ouvertes.fr/"+docs.halId_s);
   aHALElement.setAttribute("class","imgLink");
   imgElement = document.createElement('img');
   imgElement.setAttribute("title","HAL");
   imgElement.setAttribute("src","img/icons/hal.png");
   imgElement.setAttribute("height","20");
   imgElement.setAttribute("alt","HAL");
-  aHALElement.appendChild(imgElement);
-  pubLinkElement.appendChild(aHALElement);
+ aHALElement.appendChild(imgElement);
+pubLinkElement.appendChild(aHALElement);
   // create an a element with the url of the pdf
   pdfElement = document.createElement('a');
-  pdfElement.setAttribute("href",docs.fileMainAnnex_s);
+  pdfElement.setAttribute("href",docs.fileMain_s);
   pdfElement.setAttribute("class","imgLink");
   imgPdfElement = document.createElement('img');
   imgPdfElement.setAttribute("title","pdf");
   imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
   imgPdfElement.setAttribute("height","20");
   imgPdfElement.setAttribute("alt","pdf");
-  pdfElement.appendChild(imgPdfElement);
-  pubLinkElement.appendChild(pdfElement);
+ pdfElement.appendChild(imgPdfElement);
+pubLinkElement.appendChild(pdfElement);
 }
 
 
@@ -285,7 +285,7 @@ var createTalkHTML = function(docs, parent){
   spanElement.appendChild(inputElement);
   // create an a element with the url to hal
   aHALElement = document.createElement('a');
-  aHALElement.setAttribute("href",docs.halId_s);
+  aHALElement.setAttribute("href","https://hal.archives-ouvertes.fr/"+docs.halId_s);
   aHALElement.setAttribute("class","imgLink");
   imgElement = document.createElement('img');
   imgElement.setAttribute("title","HAL");
@@ -303,7 +303,7 @@ var createTalkHTML = function(docs, parent){
   imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
   imgPdfElement.setAttribute("height","20");
   imgPdfElement.setAttribute("alt","pdf");
-  pdfElement.appendChild(imgPdfElement);
+pdfElement.appendChild(imgPdfElement);
   pubLinkElement.appendChild(pdfElement);
 }
 
